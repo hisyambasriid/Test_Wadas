@@ -1,0 +1,52 @@
+﻿@page
+@model Transaksi.Pages.Barangs.IndexModel
+<partial name="_Notification" />
+<div class="container p-3">
+    <div class="row p-4">
+        <div class="col-6">
+            <h2 class="text-primary">List Barang</h2>
+        </div>
+        <div class="col-6">
+            <a asp-page="create" class="btn btn-primary">Create Barang</a>
+        </div>
+    </div>
+    <br/><br/>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Nama Barang
+                </th>
+                <th>
+                    Harga
+                </th>
+                 <th>
+                    Satuan
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model.Barangs)
+            {
+                <tr>
+                    <td width="25%">@obj.Nama</td>
+                    <td width="25%">@obj.Harga</td>
+                    <td width="25%">@obj.Satuan</td>
+                    <td width="25%">
+                        <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-page="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                            <i class="bi bi-trash-fill"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>

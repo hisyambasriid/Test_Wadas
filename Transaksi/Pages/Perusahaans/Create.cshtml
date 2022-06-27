@@ -1,0 +1,54 @@
+﻿@page
+@model Transaksi.Pages.Perusahaans.CreateModel
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3"> Create Perusahaan</h2>
+            <hr />
+        </div>
+        <div class="row mb-3">
+            <div class="row pb-2">
+                <label asp-for="Perusahaan.Nama"></label>
+                <input asp-for="@Model.Perusahaan.Nama" class="form-control"/>
+                <span asp-validation-for="Perusahaan.Nama" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="row pb-2">
+                <label asp-for="Perusahaan.Alamat"></label>
+                <input asp-for="@Model.Perusahaan.Alamat" class="form-control"/>
+                <span asp-validation-for="Perusahaan.Alamat" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="row pb-2">
+                <label asp-for="Perusahaan.NoTelpon"></label>
+                <input asp-for="@Model.Perusahaan.NoTelpon" class="form-control"/>
+                <span asp-validation-for="Perusahaan.NoTelpon" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="row pb-2">
+                <label asp-for="Perusahaan.Fax"></label>
+                <input asp-for="@Model.Perusahaan.Fax" class="form-control"/>
+                <span asp-validation-for="Perusahaan.Fax" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="row pb-2">
+                <label asp-for="Perusahaan.BidangUsaha"></label>
+                <input asp-for="@Model.Perusahaan.BidangUsaha" class="form-control"/>
+                <span asp-validation-for="Perusahaan.BidangUsaha" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-page="Index" class="btn btn-secondary">Back</a>
+    </div>
+</form>
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+
+}
