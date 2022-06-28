@@ -14,6 +14,7 @@ namespace Transaksi.DataAccess.Repository
         {
             _db = db;
             Barang = new BarangRepository(_db);
+            Perusahaan = new PerusahaanRepository(_db);
         }
         public IBarangRepository Barang { get; private set; }
         public IPerusahaanRepository Perusahaan { get; private set; }
